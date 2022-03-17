@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    public GameObject myPrefab;
+    public GameObject[] myPrefabs;
+    public Vector3 position;
     void Start()
     {
-        Instantiate(myPrefab, new Vector3(0, 0.5f, 10), Quaternion.identity);
+        Instantiate(myPrefabs[0], position, Quaternion.identity);
     }
-
-    // Update is called once per frame
     void Update()
     {
+        // Debug.Log(transform.position.z);
+        // Debug.Log(position.z);
+        if(transform.position.z >= position.z) {
+            Debug.Log("spawn");
+            position.z += 110;
+            position.y -= 20;
+            Instantiate(myPrefabs[0], position, Quaternion.identity);
+        }
         
     }
 }
