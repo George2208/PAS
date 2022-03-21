@@ -349,7 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 15
   steering: 20
-  rampReduction: 500
+  rampReduction: 0.8
 --- !u!54 &585636288
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -380,4 +380,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myPrefabs:
   - {fileID: 6193962126239683035, guid: 286488595fb065a47b427afbb0d8db52, type: 3}
+  - {fileID: 641633423534490753, guid: 327bec3e9e4f1384ea3635b34ac1f5ce, type: 3}
+  - {fileID: 8137646369490570703, guid: 92d36dd09d3b1a340acbddaeea95cf40, type: 3}
   position: {x: 0, y: -0.5, z: 45}

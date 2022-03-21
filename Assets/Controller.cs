@@ -6,6 +6,7 @@ public class Controller : MonoBehaviour
 {
     public GameObject[] myPrefabs;
     public Vector3 position;
+    public static int sectionCount = 0;
     void Start()
     {
         Instantiate(myPrefabs[0], position, Quaternion.identity);
@@ -18,8 +19,8 @@ public class Controller : MonoBehaviour
             Debug.Log("spawn");
             position.z += 110;
             position.y -= 20;
-            Instantiate(myPrefabs[0], position, Quaternion.identity);
-        }
-        
+            Instantiate(myPrefabs[Random.Range(0, myPrefabs.Length)], position, Quaternion.identity);
+            sectionCount++;
+        }  
     }
 }

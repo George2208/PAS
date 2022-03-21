@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     Rigidbody m_Rigidbody;
     public float acceleration = 10f;
     public float steering = 20f;
-    public float rampReduction = 500f;
+    public float rampReduction = 0.7f;
 
     void Start()
     {
@@ -28,6 +28,11 @@ public class Movement : MonoBehaviour
     private void OnCollisionEnter(Collision c)
     {
         if (c.gameObject.tag == "Ramp")
-            m_Rigidbody.AddForce(0, 0, -rampReduction, ForceMode.Impulse);
+        {
+            m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_Rigidbody.velocity.y, m_Rigidbody.velocity.z * rampReduction);
+        }
+            //m_Rigidbody.AddForce(0, 0, -rampReduction, ForceMode.Impulse);
+            //m_Rigidbody.velocity.z *= rampReduction;
+            //Debug.Log(m_Rigidbody.velocity.z);
     }
 }
