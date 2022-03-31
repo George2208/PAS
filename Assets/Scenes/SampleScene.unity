@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32ffa82b782788942a91f99735c11708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathParticles: {fileID: 6172686758807069287, guid: 7463d33fda590e648a5a53f4e07b11ae, type: 3}
   acceleration: 15
   steering: 20
   rampReduction: 0.8

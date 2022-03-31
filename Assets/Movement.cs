@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+
+    public ParticleSystem deathParticles;
+
     Rigidbody m_Rigidbody;
     public float acceleration = 10f;
     public float steering = 20f;
@@ -22,7 +25,10 @@ public class Movement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
+        //Debug.Log(other);
+
+        Instantiate(deathParticles, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision c)
