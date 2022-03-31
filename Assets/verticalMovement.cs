@@ -9,12 +9,13 @@ public class verticalMovement : MonoBehaviour
     private float max;
     private float min;
 
-    public int maxHeight = 4;
+    public float minHeight = 0;
+    public float maxHeight = 4;
 
     void Start()
     {
 
-        min = (-20 * Controller.sectionCount) + GetComponent<Renderer>().bounds.size.y / 2;
+        min = (-20 * Controller.sectionCount) + GetComponent<Renderer>().bounds.size.y / 2 + minHeight;
         max = (-20 * Controller.sectionCount) + GetComponent<Renderer>().bounds.size.y / 2 + maxHeight;
     }
 
