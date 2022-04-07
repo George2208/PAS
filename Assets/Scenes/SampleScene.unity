@@ -237,7 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c778e9527dbe95478f3d4fa83cea3e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 585636282}
 --- !u!114 &568796206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +265,7 @@ GameObject:
   - component: {fileID: 585636288}
   - component: {fileID: 585636287}
   - component: {fileID: 585636289}
+  - component: {fileID: 585636290}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -361,7 +361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32ffa82b782788942a91f99735c11708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathParticles: {fileID: 6172686758807069287, guid: 7463d33fda590e648a5a53f4e07b11ae, type: 3}
   acceleration: 15
   steering: 20
   rampReduction: 0.8
@@ -399,3 +398,17 @@ MonoBehaviour:
   - {fileID: 8137646369490570703, guid: 92d36dd09d3b1a340acbddaeea95cf40, type: 3}
   - {fileID: 8339639439905573207, guid: d91bf5ad4df15f9468c1af231ec9fd5c, type: 3}
   position: {x: 0, y: -0.5, z: 45}
+--- !u!114 &585636290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585636282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01ac5249c4319084e92c143e49d6c96e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticles: {fileID: 6172686758807069287, guid: 7463d33fda590e648a5a53f4e07b11ae, type: 3}
+  fallDistance: -30
