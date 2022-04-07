@@ -12,9 +12,12 @@ public class AutoDelete : MonoBehaviour
     }
     void Update()
     {
-        if(player.transform.position.z - transform.position.z > destroyDistance) {
+        if(player != null)
+        {
+            if(player.transform.position.z - transform.position.z > destroyDistance) {
             Destroy(gameObject);
             Debug.Log("delete");
+            }
         }
     }
 }

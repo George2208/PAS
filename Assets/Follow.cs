@@ -5,13 +5,17 @@ using UnityEngine;
 public class Follow : MonoBehaviour
 {
     private Vector3 offset;
-    public GameObject player;
+    private GameObject player;
     void Start()
     {
+        player = GameObject.Find("Player");
         offset = transform.position - player.transform.position;
     }
     void LateUpdate()
     {
-        transform.position = player.transform.position + offset;
+        if(player != null)
+        {
+            transform.position = player.transform.position + offset;
+        }
     }
 }
