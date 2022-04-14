@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public float acceleration = 10f;
     public float steering = 20f;
     public float rampReduction = 0.7f;
+    public float speedUp = 0.7f;
 
     void Start()
     {
@@ -23,9 +24,18 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter(Collision c)
     {
+        //Debug.Log(c.gameObject.tag);
         if (c.gameObject.tag == "Ramp")
         {
             m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_Rigidbody.velocity.y, m_Rigidbody.velocity.z * rampReduction);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "speedUp")
+        {
+            m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_Rigidbody.velocity.y, m_Rigidbody.velocity.z * speedUp);
         }
     }
 }

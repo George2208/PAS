@@ -7,6 +7,7 @@ public class deathTrigger : MonoBehaviour
     public ParticleSystem deathParticles;
     public int fallDistance = -30;
     private GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +24,14 @@ public class deathTrigger : MonoBehaviour
         }
         
     }
+
     void OnTriggerEnter(Collider other)
     {
-        Instantiate(deathParticles, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        
+        if(other.gameObject.tag == "Obstacle")
+        {
+            Instantiate(deathParticles, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

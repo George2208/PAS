@@ -9,5 +9,4 @@ public class effectOptions : MonoBehaviour
     {
         Destroy(gameObject, time);
     }
-
 }
