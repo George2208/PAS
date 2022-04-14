@@ -6,7 +6,6 @@ public class deathTrigger : MonoBehaviour
 {
     public ParticleSystem deathParticles;
     public int fallDistance = -30;
-
     private GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -20,13 +19,12 @@ public class deathTrigger : MonoBehaviour
         if(player.transform.position.y < fallDistance  + (-20 * Controller.sectionCount) && player != null)
         {
             Instantiate(deathParticles, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Destroy(gameObject);  
         }
+        
     }
-
     void OnTriggerEnter(Collider other)
     {
-
         Instantiate(deathParticles, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

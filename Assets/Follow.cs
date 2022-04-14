@@ -13,7 +13,7 @@ public class Follow : MonoBehaviour
     }
     void LateUpdate()
     {
-        if(player != null)
+        if(player!=null)
         {
             transform.position = player.transform.position + offset;
         }
