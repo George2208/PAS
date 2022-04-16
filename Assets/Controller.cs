@@ -29,7 +29,6 @@ public class Controller : MonoBehaviour
     float GetDistance()
     {
         float dist = rb.velocity[2];//takes velocity in z, the direction of the ball
-        Debug.Log(dist);
         return dist * multiplier;
     }
 }
