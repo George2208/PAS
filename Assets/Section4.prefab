@@ -299,6 +299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  path: {fileID: 5450907741972701626}
+  minHeight: 0
   maxHeight: 4
 --- !u!114 &7143393066079153056
 MonoBehaviour:
@@ -393,6 +395,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  path: {fileID: 5450907741972701626}
+  minHeight: 0
   maxHeight: 4
 --- !u!114 &4184853916787778084
 MonoBehaviour:
@@ -487,6 +491,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  path: {fileID: 5450907741972701626}
+  minHeight: 0
   maxHeight: 5
 --- !u!114 &4495065468559786656
 MonoBehaviour:
@@ -581,6 +587,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  path: {fileID: 5450907741972701626}
+  minHeight: 0
   maxHeight: 5
 --- !u!114 &5879701607613034186
 MonoBehaviour:
@@ -688,6 +696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  path: {fileID: 5450907741972701626}
+  minHeight: 0
   maxHeight: 5
 --- !u!1001 &8231727554473455894
 PrefabInstance:
@@ -782,6 +792,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  path: {fileID: 5450907741972701626}
+  minHeight: 0
   maxHeight: 4
 --- !u!1001 &8846600127175418167
 PrefabInstance:
@@ -876,6 +888,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  path: {fileID: 5450907741972701626}
+  minHeight: 0
   maxHeight: 4
 --- !u!1001 &9107912663698977077
 PrefabInstance:
@@ -970,4 +984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  path: {fileID: 5450907741972701626}
+  minHeight: 0
   maxHeight: 6

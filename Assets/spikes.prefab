@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7971495528427012216}
-  - component: {fileID: -7887188351956012167}
   - component: {fileID: -1063057766577989356}
   m_Layer: 0
   m_Name: spikes
@@ -33,21 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-7887188351956012167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3643424953763299085}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 525eeed3f8477ca4eba949fa008640a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  minHeight: -3
-  maxHeight: 1
 --- !u!23 &-1063057766577989356
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104,7 +88,7 @@ GameObject:
   - component: {fileID: 7033742667881675305}
   m_Layer: 0
   m_Name: Cone
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

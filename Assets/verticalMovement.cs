@@ -9,14 +9,17 @@ public class verticalMovement : MonoBehaviour
     private float max;
     private float min;
 
-    public float minHeight = 0;
-    public float maxHeight = 4;
+    public Transform path;
+
+    public float minHeight;
+    public float maxHeight;
 
     void Start()
     {
-
-        min = (-20 * Controller.sectionCount) + GetComponent<Renderer>().bounds.size.y / 2 + minHeight;
-        max = (-20 * Controller.sectionCount) + GetComponent<Renderer>().bounds.size.y / 2 + maxHeight;
+        minHeight = path.position.y + 0.5f;
+        maxHeight = path.position.y + 5;
+        min = GetComponent<Renderer>().bounds.size.y / 2 + minHeight;
+        max = GetComponent<Renderer>().bounds.size.y / 2 + maxHeight;
     }
 
     // Update is called once per frame
