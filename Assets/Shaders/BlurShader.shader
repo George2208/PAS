@@ -3,6 +3,7 @@ Shader "Custom/BlurShader"{
 	{
 		_MainTex("Basic Texture", 2D) = "white" {}
 		_BlurSize("Blur Strength", Range(0, 0.3)) = 0
+        _Glow ("Intensity", Range(0, 5)) = 1
         [KeywordEnum(Default, More, Enough)] _Examples ("Number of examples", Float) = 0
 	}
     Subshader
@@ -13,21 +14,13 @@ Shader "Custom/BlurShader"{
 
             #pragma vertex vert
             #pragma fragment frag
-            #pragma multi_compile _exDefault, _exMore, _exEnough
 
-            #define EXAMPLES = 10
-
-
-            #if _exDefault
-                #define EXAMPLES 10
-            #elif _exMore
-                #define EXAMPLES 25
-            #else
-                #define EXAMPLES 40
-            #endif
+            #define EXAMPLES 10
 
             sampler2D _MainTex;
             float _BlurSize;
+            float _Glow;
+            float _vigOn;
 
             struct vertexInput
             {
@@ -57,7 +50,13 @@ Shader "Custom/BlurShader"{
                     float2 uv = i.uv + float2(0, (j / EXAMPLES) * _BlurSize);
                     col += tex2D(_MainTex, uv);
                 }
-                return col / EXAMPLES;
+                
+                if (_vigOn != 0) 
+                {
+                    float vigEffect = 1 - length(i.uv * 2 - 1) / 1.4;
+                    return (col / EXAMPLES) * _Glow * vigEffect;
+                }
+                return (col / EXAMPLES) * _Glow;
             }
             ENDCG
         }
