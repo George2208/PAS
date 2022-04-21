@@ -17,3 +17,4 @@
 - [x] added pause menu
 - [x] added effects on options submenu
 - [x] create death animation 
+- [] train AI to play the game
