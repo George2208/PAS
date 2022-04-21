@@ -8,6 +8,7 @@ public class PausedGame : MonoBehaviour
     public static bool pause = false;
     public GameObject putPause;
 
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)) {
@@ -34,6 +35,7 @@ public class PausedGame : MonoBehaviour
 
     public void LoadMenu() 
     { 
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
 }

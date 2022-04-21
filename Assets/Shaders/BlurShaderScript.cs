@@ -39,12 +39,6 @@ public class BlurShaderScript : MonoBehaviour
         blurMat.SetFloat("_BlurSize", blur);
         blurMat.SetFloat("_Glow", lum);
         blurMat.SetFloat("_vigOn", vigOn);
-        int width = source.width / 2, height = source.height / 2;
-		RenderTextureFormat format = source.format;
-
-		RenderTexture r = RenderTexture.GetTemporary(width, height, 0, format);
-        Graphics.Blit(source, r, blurMat);
-		Graphics.Blit(r, destination, blurMat);
-		RenderTexture.ReleaseTemporary(r);
+		Graphics.Blit(source, destination, blurMat);
     }
 }
