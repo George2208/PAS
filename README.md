@@ -11,5 +11,9 @@
 - [x] create the player that consist of a ball
 - [x] move the ball
 - [x] create places where the ball moves
-- [ ] adding textures
-- [ ] create game menu
+- [x] adding textures
+- [x] create game menu
+- [x] added skybox, scoring system and lightning system
+- [x] added pause menu
+- [x] added effects on options submenu
+- [x] create death animation 
