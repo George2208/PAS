@@ -18,3 +18,6 @@
 - [x] added effects on options submenu
 - [x] create death animation 
 - [x] train AI to play the game
+
+## Video Presenting the game
+- https://we.tl/t-0XHGTFRQ4d
