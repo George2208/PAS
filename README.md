@@ -20,4 +20,4 @@
 - [x] train AI to play the game
 
 ## Video Presenting the game
-- https://we.tl/t-0XHGTFRQ4d
+- [https://we.tl/t-0XHGTFRQ4d](https://we.tl/t-rk8JypUt1f)
